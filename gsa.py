@@ -341,8 +341,7 @@ def site_pages():
 def utm_url(base, canale, tipo):
     parts = urllib.parse.urlsplit(base)
     q = [(k, v) for k, v in urllib.parse.parse_qsl(parts.query) if not k.startswith("utm_")]
-    q += [("utm_source", canale), ("utm_medium", "social"), ("utm_campaign", CFG["utm_campaign"]),
-          ("utm_content", f"{canale}_{tipo}")]
+    q += [("utm_source", canale), ("utm_medium", "social"), ("utm_campaign", tipo)]
     return urllib.parse.urlunsplit((parts.scheme, parts.netloc, parts.path, urllib.parse.urlencode(q), ""))
 
 
@@ -750,7 +749,7 @@ def cmd_report(args):
     lines += ["## Riepilogo", "", f"- Post previsti: {len(posts)}",
               "- Per stato: " + (", ".join(f"{k} {v}" for k, v in sorted(counts.items())) or "nessuno"),
               f"- Modifiche manuali registrate: {edits}", f"- Articoli in coda: {q}",
-              "- Traffico GA4: da collegare (utm_source threads/linkedin, utm_campaign blog_articolo)"]
+              "- Traffico GA4: da collegare (utm_source threads/linkedin, utm_medium social, utm_campaign = tipo di post)"]
     folder = ROOT / CFG["reports_dir"]
     folder.mkdir(exist_ok=True)
     path = folder / f"{tuesday.isoformat()}.md"

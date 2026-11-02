@@ -4,7 +4,6 @@
   "db_path": "data/gsa.sqlite",
   "images_dir": "images",
   "reports_dir": "reports",
-  "utm_campaign": "blog_articolo",
   "slots": [
     {
       "weekday": 1,

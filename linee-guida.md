@@ -28,7 +28,7 @@ Prima di scrivere, scegli cinque idee diverse dall'articolo, una per post, ideal
 
 ## Threads
 
-- Limite 500 caratteri compreso il link (auto). Il link tracciato occupa circa 170 caratteri: il testo vero resta sotto i 310.
+- Limite 500 caratteri compreso il link (auto). Il link tracciato occupa circa 140 caratteri: con l'etichetta "Leggi l'articolo:" il testo vero resta sotto i 340.
 - Struttura tipica: una prima riga che si legge da sola e incuriosisce, due o tre righe brevi di sostanza, la frase di invito con il link.
 - Righe brevi, a capo singolo tra i blocchi. Niente elenchi lunghi.
 - Niente hashtag.
@@ -48,10 +48,8 @@ Prima di scrivere, scegli cinque idee diverse dall'articolo, una per post, ideal
 
 - Ogni testo contiene una sola volta il segnaposto `{link}`: lo script lo sostituisce con l'URL tracciato (auto).
 - Di norma il link punta all'articolo. Se un'altra pagina del sito è davvero più pertinente (per esempio la pagina servizi o il quiz di stile citato nell'articolo), indicala nel campo `url_base`, scegliendola solo tra le pagine elencate da `gsa.py next` o tra i link interni dell'articolo. Mai URL inventati.
-- La frase che accompagna il link spiega cosa si trova di là, con parole sempre diverse. Esempi di registro, da non copiare alla lettera:
-  - "Nell'articolo completo trovi la sequenza passo per passo: {link}"
-  - "Ho messo in fila i controlli da fare prima del cambio: {link}"
-  - "Le domande da farsi, con le risposte, sono qui: {link}"
+- Threads e LinkedIn (profilo personale) non permettono testo cliccabile: il link è sempre l'URL incollato. Per questo il link sta da solo sull'ultima riga, preceduto dall'etichetta fissa `Leggi l'articolo:` (o `Leggi l'articolo completo:` su LinkedIn). Esempio di ultima riga: `Leggi l'articolo: {link}`.
+- La riga prima dell'etichetta può chiudere il ragionamento o fare una domanda, ma non ripete cosa c'è nell'articolo con formule uguali ogni volta.
 - Mai "link in bio", "clicca qui", "scopri di più" (auto per alcune formule).
 
 ## Formule vietate

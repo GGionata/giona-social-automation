@@ -47,7 +47,7 @@ Ogni bozza viene bloccata se:
 
 ## Link tracciati (GA4)
 
-`utm_source` = threads o linkedin, `utm_medium` = social, `utm_campaign` = blog_articolo, `utm_content` = canale_tipo (per esempio `threads_problema`). L'articolo si distingue dalla pagina di destinazione. In GA4: Acquisizione traffico, filtro Campagna sessione = blog_articolo.
+`utm_source` = threads o linkedin, `utm_medium` = social, `utm_campaign` = tipo di post (problema, approfondimento, consiglio, soluzione). Nel testo il link sta sull'ultima riga dopo l'etichetta "Leggi l'articolo:", perché Threads e LinkedIn non supportano il testo cliccabile. In GA4: Acquisizione traffico, Mezzo sessione = social, Campagna sessione = tipo di post.
 
 ## Comandi
 
