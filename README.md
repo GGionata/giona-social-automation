@@ -14,7 +14,7 @@ Il sistema non pubblica mai e non modifica il sito: legge la REST API pubblica d
 
 ## Come funziona
 
-- **Task programmato** nel cloud di Claude, ogni giorno alle 08:00 e alle 13:00 (Europe/Rome). Gira anche a computer spento, segue [PROCEDURA.md](PROCEDURA.md).
+- **Task programmato** nel cloud di Claude, ogni giorno alle 07:57 e alle 12:57 (Europe/Rome). Gira anche a computer spento, segue [PROCEDURA.md](PROCEDURA.md).
 - **Database SQLite** in `data/gsa.sqlite`: articoli, bozze, link, immagini, date, stati, modifiche manuali, registro delle esecuzioni. Ogni esecuzione lo aggiorna e lo salva in questo repository.
 - **Google Sheet** [Giona Social Automation - Calendario](https://docs.google.com/spreadsheets/d/1-J-DsBXfCD_kbzi1YgN8cdign6kG14cwJMMuFt0l1fY/edit): qui si approva, si corregge e si segna come pubblicato. Mostra le ultime due settimane, il futuro e le bozze aperte; lo storico completo resta nel database.
 - **Immagini**: copia JPEG dell'immagine in evidenza in `images/<id articolo>/`. Gli originali WebP su WordPress non vengono toccati.

@@ -1,6 +1,6 @@
 # Procedura dell'esecuzione automatica
 
-Questa è la procedura che il task programmato esegue ogni giorno alle 08:00 e alle 13:00 (Europe/Rome). Nessuno segue l'esecuzione: niente domande, si prende la lettura più ragionevole e la si dichiara nel messaggio finale.
+Questa è la procedura che il task programmato esegue ogni giorno poco prima delle 08:00 e delle 13:00 (Europe/Rome). Nessuno segue l'esecuzione: niente domande, si prende la lettura più ragionevole e la si dichiara nel messaggio finale.
 
 Vincoli assoluti:
 - Non pubblicare mai nulla sui social e non chiamare API di pubblicazione.
@@ -12,6 +12,8 @@ Dati fissi:
 - Google Sheet calendario: id `1-J-DsBXfCD_kbzi1YgN8cdign6kG14cwJMMuFt0l1fY`, foglio `Calendario`, intestazione in riga 1, colonne A:N
 
 ## Passo 1. Preparazione
+
+Se il clone non riesce per permessi, chiama lo strumento `add_repo` con owner `GGionata`, repo `giona-social-automation`, access `push`, poi riprova una volta.
 
 ```bash
 cd ~ && rm -rf giona-social-automation && git clone --depth 1 https://github.com/GGionata/giona-social-automation && cd giona-social-automation
@@ -66,7 +68,7 @@ Un solo articolo per esecuzione.
 
 ## Passo 7. Report del lunedì
 
-Solo nell'esecuzione delle 08:00 di lunedì: `python3 gsa.py report --week $(date -d yesterday +%F)` per la settimana appena chiusa.
+Solo nell'esecuzione del mattino di lunedì: `python3 gsa.py report --week $(date -d yesterday +%F)` per la settimana appena chiusa.
 
 ## Passo 8. Salva
 
@@ -82,7 +84,7 @@ Se il push viene rifiutato, `git pull --rebase origin main` e riprova una volta.
 Invia un messaggio con `SendUserMessage` solo se c'è qualcosa da sapere; un'esecuzione senza novità termina senza messaggi.
 
 Contenuto, in quest'ordine e solo le parti presenti:
-1. **Post di oggi** (solo esecuzione delle 08:00, da `python3 gsa.py today`): ora, canale, stato. Se è `approvato`, il testo completo in un blocco di codice pronto da copiare e il link all'immagine se presente. Se non è approvato, dillo chiaramente.
+1. **Post di oggi** (solo esecuzione del mattino, da `python3 gsa.py today`): ora, canale, stato. Se è `approvato`, il testo completo in un blocco di codice pronto da copiare e il link all'immagine se presente. Se non è approvato, dillo chiaramente.
 2. **Nuove bozze pronte**: titolo dell'articolo, le date delle cinque uscite, link al foglio https://docs.google.com/spreadsheets/d/1-J-DsBXfCD_kbzi1YgN8cdign6kG14cwJMMuFt0l1fY/edit
 3. **Problemi**: bozze bloccate, link non funzionanti, immagini mancanti, errori di sincronizzazione o di push.
 4. **Report**: se generato, il percorso del file e il riepilogo in tre righe.
