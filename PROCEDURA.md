@@ -49,14 +49,13 @@ Scrivi il nuovo testo in un file con il segnaposto `{link}` al posto del link e 
 
 `python3 gsa.py next`
 
-Se `articolo` è `null`, salta al passo 6.
+Se `articolo` è `null` (settimane gia coperte o coda vuota), salta al passo 6.
 
 Altrimenti:
 1. Leggi `linee-guida.md` per intero.
-2. Se `riserva_evergreen` è `true`, valuta se l'argomento è ancora attuale e utile: se non lo è, `python3 gsa.py skip <ID> "<motivo>"` e rilancia `next` (al massimo tre volte).
-3. Leggi `content_text` dell'articolo, scegli cinque idee diverse e scrivi le cinque bozze in `/tmp/bozze.json` nel formato indicato nelle linee guida. Evita le aperture in `aperture_recenti_da_non_ripetere`.
-4. `python3 gsa.py save /tmp/bozze.json`
-5. Per ogni post in stato `bloccato`, correggi con `edit` come al passo 4.
+2. Leggi `content_text` dell'articolo, scegli cinque idee diverse e scrivi le cinque bozze in `/tmp/bozze.json` nel formato indicato nelle linee guida. Evita le aperture in `aperture_recenti_da_non_ripetere`.
+3. `python3 gsa.py save /tmp/bozze.json`
+4. Per ogni post in stato `bloccato`, correggi con `edit` come al passo 4.
 
 Un solo articolo per esecuzione.
 

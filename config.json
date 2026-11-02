@@ -6,11 +6,41 @@
   "reports_dir": "reports",
   "utm_campaign": "blog_articolo",
   "slots": [
-    {"weekday": 1, "time": "09:00", "canale": "threads", "tipo": "problema", "immagine": true},
-    {"weekday": 2, "time": "09:00", "canale": "linkedin", "tipo": "approfondimento", "immagine": true},
-    {"weekday": 3, "time": "12:30", "canale": "threads", "tipo": "consiglio", "immagine": false},
-    {"weekday": 4, "time": "09:00", "canale": "linkedin", "tipo": "soluzione", "immagine": false},
-    {"weekday": 5, "time": "09:00", "canale": "threads", "tipo": "approfondimento", "immagine": false}
+    {
+      "weekday": 1,
+      "time": "09:00",
+      "canale": "threads",
+      "tipo": "problema",
+      "immagine": true
+    },
+    {
+      "weekday": 2,
+      "time": "09:00",
+      "canale": "linkedin",
+      "tipo": "approfondimento",
+      "immagine": true
+    },
+    {
+      "weekday": 3,
+      "time": "12:30",
+      "canale": "threads",
+      "tipo": "consiglio",
+      "immagine": false
+    },
+    {
+      "weekday": 4,
+      "time": "09:00",
+      "canale": "linkedin",
+      "tipo": "soluzione",
+      "immagine": false
+    },
+    {
+      "weekday": 5,
+      "time": "09:00",
+      "canale": "threads",
+      "tipo": "approfondimento",
+      "immagine": false
+    }
   ],
   "limits": {
     "threads_max_chars": 500,
@@ -20,7 +50,7 @@
     "image_max_width": 1440,
     "image_min_width": 320,
     "max_similarity": 0.45,
-    "reserve_cooldown_days": 120
+    "horizon_days": 8
   },
   "banned_phrases": [
     "hai centrato il punto",

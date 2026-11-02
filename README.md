@@ -30,9 +30,9 @@ Il sistema non pubblica mai e non modifica il sito: legge la REST API pubblica d
 
 ## Coda degli articoli
 
-- Un articolo per settimana, cinque post.
-- Più articoli nuovi in attesa escono in ordine di pubblicazione, dal meno recente.
-- I 25 articoli pubblicati prima dell'avvio sono **riserva evergreen**: si usano solo nelle settimane senza articoli nuovi, dal meno recente, saltando quelli non più attuali e quelli già promossi negli ultimi 120 giorni.
+- Tutti gli articoli pubblicati entrano in un'unica coda e vengono usati dal meno recente, uno per settimana (cinque post). I nuovi articoli si aggiungono in fondo.
+- Le bozze si preparano solo per la prossima settimana libera, con circa una settimana di anticipo (`horizon_days` in `config.json`).
+- Per togliere un articolo dalla coda: `python3 gsa.py skip ID "motivo"`.
 
 ## Controlli automatici
 

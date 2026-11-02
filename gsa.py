@@ -2,11 +2,11 @@
 """Giona Social Automation: WordPress -> bozze Threads + LinkedIn (pubblicazione manuale).
 
 Comandi principali:
-  init [--queue ID ...]   crea il database e importa gli articoli esistenti come riserva
+  init                     crea il database e mette in coda tutti gli articoli pubblicati
   fetch                    rileva i nuovi articoli pubblicati e li mette in coda
   next                     JSON dell'articolo da trasformare in bozze (o "niente")
   save FILE.json           salva le 5 bozze, prepara immagine, calendario e controlli
-  skip ID MOTIVO           esclude un articolo dalla coda o dalla riserva
+  skip ID MOTIVO           esclude un articolo dalla coda
   edit POST_ID FILE.txt    corregge il testo di una bozza e la ricontrolla
   review                   bozze da riscrivere (da rivedere o bloccate)
   check                    ricontrolla tutte le bozze non pubblicate
@@ -246,7 +246,7 @@ def cmd_init(args):
     posts = [parse_post(p) for p in wp_posts()]
     queue = set(args.queue or [])
     for a in posts:
-        insert_article(con, a, "in_coda" if a["id"] in queue else "riserva")
+        insert_article(con, a, "in_coda")
     con.commit()
     log_run(con, "init", f"{len(posts)} articoli, in coda: {sorted(queue)}")
     out({"articoli": len(posts), "in_coda": sorted(queue)})
@@ -299,21 +299,15 @@ def first_free_week(con, ref=None):
 
 def cmd_next(args):
     con = db()
-    row = con.execute("SELECT * FROM articles WHERE stato = 'in_coda' ORDER BY date_gmt ASC LIMIT 1").fetchone()
-    reserve = False
+    # coda unica dal meno recente; bozze preparate solo per la prossima settimana libera entro l'orizzonte
     week = first_free_week(con)
+    start = slot_datetimes(week)[0][1]
+    if start - now_local() > timedelta(days=CFG["limits"]["horizon_days"]):
+        out({"articolo": None, "motivo": f"settimane coperte fino al {week - timedelta(days=7)}"})
+        return
+    row = con.execute("SELECT * FROM articles WHERE stato = 'in_coda' ORDER BY date_gmt ASC LIMIT 1").fetchone()
     if not row:
-        # riserva evergreen solo se la prossima settimana libera inizia entro 48 ore
-        start = slot_datetimes(week)[0][1]
-        if start - now_local() <= timedelta(hours=48):
-            cutoff = (now_local() - timedelta(days=CFG["limits"]["reserve_cooldown_days"])).isoformat()
-            row = con.execute(
-                """SELECT a.* FROM articles a WHERE a.stato = 'riserva' AND NOT EXISTS (
-                     SELECT 1 FROM posts p WHERE p.article_id = a.id AND p.created_at > ?)
-                   ORDER BY a.date_gmt ASC LIMIT 1""", (cutoff,)).fetchone()
-            reserve = row is not None
-    if not row:
-        out({"articolo": None, "motivo": "nessun articolo in coda e settimana successiva gia coperta o lontana"})
+        out({"articolo": None, "motivo": "nessun articolo in coda"})
         return
     recent = [r["testo"] for r in con.execute(
         "SELECT testo FROM posts WHERE stato != 'scartato' ORDER BY created_at DESC LIMIT 30")]
@@ -321,7 +315,6 @@ def cmd_next(args):
     out({
         "articolo": {k: row[k] for k in ("id", "title", "link", "date_gmt", "categories", "excerpt",
                                           "image_url", "image_alt", "content_text")},
-        "riserva_evergreen": reserve,
         "settimana": week.isoformat(),
         "calendario": [{"data": iso(dt), "giorno": WEEKDAYS[dt.weekday()], "canale": s["canale"], "tipo": s["tipo"],
                         "immagine": s["immagine"]} for s, dt in slot_datetimes(week)],
