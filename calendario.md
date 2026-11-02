@@ -1,6 +1,6 @@
 # Calendario editoriale
 
-Aggiornato: 2026-11-02 09:05 (Europe/Rome)
+Aggiornato: 2026-11-02 09:08 (Europe/Rome)
 
 | Data | Ora | Canale | Tipo | Articolo | Stato | Problemi |
 |---|---|---|---|---|---|---|
