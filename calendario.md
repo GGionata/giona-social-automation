@@ -1,18 +1,22 @@
 # Calendario editoriale
 
-Aggiornato: 2026-11-02 09:24 (Europe/Rome)
+Aggiornato: 2026-11-02 13:02 (Europe/Rome)
 
 | Data | Ora | Canale | Tipo | Articolo | Stato | Problemi |
 |---|---|---|---|---|---|---|
-| sabato 07/11/2026 | 09:00 | threads | approfondimento | Delegare la tua voce su LinkedIn: Il potere del Ghostwriting per Social Media | da approvare |  |
-| venerdì 06/11/2026 | 09:00 | linkedin | soluzione | Delegare la tua voce su LinkedIn: Il potere del Ghostwriting per Social Media | da approvare |  |
-| giovedì 05/11/2026 | 12:30 | threads | consiglio | Delegare la tua voce su LinkedIn: Il potere del Ghostwriting per Social Media | da approvare |  |
-| mercoledì 04/11/2026 | 09:00 | linkedin | approfondimento | Delegare la tua voce su LinkedIn: Il potere del Ghostwriting per Social Media | da approvare |  |
+| sabato 14/11/2026 | 09:00 | threads | approfondimento | Perché il tuo sito non porta clienti (anche se è bello) | da approvare |  |
+| venerdì 13/11/2026 | 09:00 | linkedin | soluzione | Perché il tuo sito non porta clienti (anche se è bello) | da approvare |  |
+| giovedì 12/11/2026 | 12:30 | threads | consiglio | Perché il tuo sito non porta clienti (anche se è bello) | da approvare |  |
+| mercoledì 11/11/2026 | 09:00 | linkedin | approfondimento | Perché il tuo sito non porta clienti (anche se è bello) | da approvare |  |
+| martedì 10/11/2026 | 09:00 | threads | problema | Perché il tuo sito non porta clienti (anche se è bello) | da approvare |  |
+| sabato 07/11/2026 | 09:00 | threads | approfondimento | Delegare la tua voce su LinkedIn: Il potere del Ghostwriting per Social Media | approvato |  |
+| venerdì 06/11/2026 | 09:00 | linkedin | soluzione | Delegare la tua voce su LinkedIn: Il potere del Ghostwriting per Social Media | approvato |  |
+| giovedì 05/11/2026 | 12:30 | threads | consiglio | Delegare la tua voce su LinkedIn: Il potere del Ghostwriting per Social Media | approvato |  |
+| mercoledì 04/11/2026 | 09:00 | linkedin | approfondimento | Delegare la tua voce su LinkedIn: Il potere del Ghostwriting per Social Media | approvato |  |
 | martedì 03/11/2026 | 09:00 | threads | problema | Delegare la tua voce su LinkedIn: Il potere del Ghostwriting per Social Media | da approvare |  |
 
 ## Articoli in coda
 
-- 716: Perché il tuo sito non porta clienti (anche se è bello)
 - 730: Web designer a Milano: come scegliere quello giusto
 - 709: Quanto costa rifare un sito web nel 2026? Una guida senza listini
 - 740: Il Paradosso Dannoso: Perché non investire nel marketing digitale nel 2026 è un grave errore strategico
