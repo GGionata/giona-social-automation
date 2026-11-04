@@ -1,11 +1,11 @@
 # Calendario editoriale
 
-Aggiornato: 2026-11-03 07:59 (Europe/Rome)
+Aggiornato: 2026-11-04 07:59 (Europe/Rome)
 
 | Data | Ora | Canale | Tipo | Articolo | Stato | Problemi |
 |---|---|---|---|---|---|---|
-| sabato 14/11/2026 | 09:00 | threads | approfondimento | Perché il tuo sito non porta clienti (anche se è bello) | da approvare |  |
-| venerdì 13/11/2026 | 09:00 | linkedin | soluzione | Perché il tuo sito non porta clienti (anche se è bello) | approvato |  |
+| sabato 14/11/2026 | 09:00 | threads | approfondimento | Perché il tuo sito non porta clienti (anche se è bello) | approvato |  |
+| venerdì 13/11/2026 | 09:00 | linkedin | soluzione | Perché il tuo sito non porta clienti (anche se è bello) | pubblicato |  |
 | giovedì 12/11/2026 | 12:30 | threads | consiglio | Perché il tuo sito non porta clienti (anche se è bello) | approvato |  |
 | mercoledì 11/11/2026 | 09:00 | linkedin | approfondimento | Perché il tuo sito non porta clienti (anche se è bello) | approvato |  |
 | martedì 10/11/2026 | 09:00 | threads | problema | Perché il tuo sito non porta clienti (anche se è bello) | approvato |  |
@@ -13,7 +13,7 @@ Aggiornato: 2026-11-03 07:59 (Europe/Rome)
 | venerdì 06/11/2026 | 09:00 | linkedin | soluzione | Delegare la tua voce su LinkedIn: Il potere del Ghostwriting per Social Media | approvato |  |
 | giovedì 05/11/2026 | 12:30 | threads | consiglio | Delegare la tua voce su LinkedIn: Il potere del Ghostwriting per Social Media | approvato |  |
 | mercoledì 04/11/2026 | 09:00 | linkedin | approfondimento | Delegare la tua voce su LinkedIn: Il potere del Ghostwriting per Social Media | approvato |  |
-| martedì 03/11/2026 | 09:00 | threads | problema | Delegare la tua voce su LinkedIn: Il potere del Ghostwriting per Social Media | da approvare |  |
+| martedì 03/11/2026 | 09:00 | threads | problema | Delegare la tua voce su LinkedIn: Il potere del Ghostwriting per Social Media | pubblicato |  |
 
 ## Articoli in coda
 
