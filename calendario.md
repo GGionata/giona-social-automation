@@ -1,6 +1,6 @@
 # Calendario editoriale
 
-Aggiornato: 2026-11-04 07:59 (Europe/Rome)
+Aggiornato: 2026-11-05 07:21 (Europe/Rome)
 
 | Data | Ora | Canale | Tipo | Articolo | Stato | Problemi |
 |---|---|---|---|---|---|---|
@@ -12,7 +12,7 @@ Aggiornato: 2026-11-04 07:59 (Europe/Rome)
 | sabato 07/11/2026 | 09:00 | threads | approfondimento | Delegare la tua voce su LinkedIn: Il potere del Ghostwriting per Social Media | approvato |  |
 | venerdì 06/11/2026 | 09:00 | linkedin | soluzione | Delegare la tua voce su LinkedIn: Il potere del Ghostwriting per Social Media | approvato |  |
 | giovedì 05/11/2026 | 12:30 | threads | consiglio | Delegare la tua voce su LinkedIn: Il potere del Ghostwriting per Social Media | approvato |  |
-| mercoledì 04/11/2026 | 09:00 | linkedin | approfondimento | Delegare la tua voce su LinkedIn: Il potere del Ghostwriting per Social Media | approvato |  |
+| mercoledì 04/11/2026 | 09:00 | linkedin | approfondimento | Delegare la tua voce su LinkedIn: Il potere del Ghostwriting per Social Media | pubblicato |  |
 | martedì 03/11/2026 | 09:00 | threads | problema | Delegare la tua voce su LinkedIn: Il potere del Ghostwriting per Social Media | pubblicato |  |
 
 ## Articoli in coda
